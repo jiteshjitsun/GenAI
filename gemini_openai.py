@@ -1,0 +1,22 @@
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+
+client = OpenAI(
+    api_key="AIzaSyAnEwGfBx5PPoiL3lKIoe2z0pLksZwf2Pw",
+    base_url=""
+)
+
+response = client.chat.completions.create(
+    model="gemini-2.5-flash",
+    messages=[
+        {
+            "role": "user",
+            "content": "Hey There! how are you"
+        }
+    ]
+)
+
+print(response.choices[0].message.content)
+# print(response)
