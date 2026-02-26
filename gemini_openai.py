@@ -5,7 +5,7 @@ load_dotenv()
 
 client = OpenAI(
     api_key="AIzaSyAnEwGfBx5PPoiL3lKIoe2z0pLksZwf2Pw",
-    base_url=""
+    base_url="https://generativelanguage.googleapis.com/v1beta/"
 )
 
 response = client.chat.completions.create(
